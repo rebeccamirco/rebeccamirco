@@ -20,6 +20,14 @@ section{
   padding:90px 0;
 }
 
+/* Alternating section backgrounds (skip the hero with its own background image) */
+section:not(.hero):nth-of-type(even){
+  background:#f1f3f5;
+}
+section:not(.hero):nth-of-type(odd){
+  background:#ffffff;
+}
+
 .hero{
   height:100vh;
   background:url('https://images.unsplash.com/photo-1519741497674-611481863552') center/cover no-repeat;
@@ -145,11 +153,28 @@ footer{
 </div>
 </section>
 
+<!-- CONFERMA -->
+<section id="conferma" class="text-center">
+  <div class="container">
+    <h2><span class="lang-it">Conferma</span><span class="lang-en" style="display:none;">RSVP</span></h2>
+    <p class="mt-4 fs-4">
+      <span class="lang-it">È gradita gentile conferma entro il 1 Luglio 2026.</span><span class="lang-en" style="display:none;">Please RSVP by July 1, 2026.</span>
+    </p>
+  
+    <!-- INSERISCI QUI IL LINK GOOGLE FORM -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmPKMorp0cVdz-ngoFTXusCj4ZZlpNNuX4EQ_iDw9OR-fquQ/viewform?usp=publish-editor"
+       target="_blank"
+       class="btn btn-dark btn-lg mt-4">
+       <span class="lang-it">Conferma la tua presenza</span><span class="lang-en" style="display:none;">Confirm your attendance</span>
+    </a>
+  </div>
+  </section>
+
 <!-- LISTA NOZZE -->
-<section id="lista" class="bg-light text-center">
+<section id="lista" class="text-center">
 <div class="container">
   <h2><span class="lang-it">Lista di Nozze</span><span class="lang-en" style="display:none;">Wedding Registry</span></h2>
-  <p class="mt-4 fs-4">
+  <!-- <p class="mt-4 fs-4">
     <span class="lang-it">La vostra presenza è il dono più grande ❤️</span><span class="lang-en" style="display:none;">Your presence is the greatest gift ❤️</span>
   </p>
   <p class="mt-3">
@@ -157,24 +182,7 @@ footer{
   </p>
   <p class="fw-bold mt-3">
     IBAN: IT00X0000000000000000000000
-  </p>
-</div>
-</section>
-
-<!-- CONFERMA -->
-<section id="conferma" class="text-center">
-<div class="container">
-  <h2><span class="lang-it">Conferma</span><span class="lang-en" style="display:none;">RSVP</span></h2>
-  <p class="mt-4 fs-4">
-    <span class="lang-it">È gradita gentile conferma entro il 1 Agosto 2026.</span><span class="lang-en" style="display:none;">Please RSVP by August 1, 2026.</span>
-  </p>
-
-  <!-- INSERISCI QUI IL LINK GOOGLE FORM -->
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmPKMorp0cVdz-ngoFTXusCj4ZZlpNNuX4EQ_iDw9OR-fquQ/viewform?usp=publish-editor"
-     target="_blank"
-     class="btn btn-dark btn-lg mt-4">
-     <span class="lang-it">Conferma la tua presenza</span><span class="lang-en" style="display:none;">Confirm your attendance</span>
-  </a>
+  </p> -->
 </div>
 </section>
 
