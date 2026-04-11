@@ -61,11 +61,13 @@ h2{
   background:rgba(255,255,255,0.95);
 }
 
-.music-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  z-index:999;
+.fixed-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 999;
 }
 
 .btn-custom{
@@ -127,30 +129,27 @@ footer{
   <source src="./media/song.mp3" type="audio/mpeg">
 </audio>
 
-<button class="btn btn-dark music-btn" onclick="toggleMusic()">🎵 <span class="lang-it">Musica</span><span class="lang-en" style="display:none;">Music</span></button>
+<div class="fixed-buttons">
+  <button class="btn btn-dark" onclick="toggleMusic()">🎵 <span class="lang-it">Musica</span><span class="lang-en" style="display:none;">Music</span></button>
+  <button id="lang-toggle" class="btn btn-outline-dark" onclick="toggleLang()">🇬🇧 EN</button>
+</div>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
-<div class="container">
-  <a class="navbar-brand fw-bold fs-4" href="#">Mirco & Rebecca</a>
-  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="menu">
-    <ul class="navbar-nav ms-auto fs-5">
-      <li class="nav-item"><a class="nav-link" href="#info"><span class="lang-it">Info</span><span class="lang-en" style="display:none;">Information</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="#lista"><span class="lang-it">Lista Nozze</span><span class="lang-en" style="display:none;">Wedding Registry</span></a></li>
-      <li class="nav-item"><a class="nav-link" href="#conferma"><span class="lang-it">Conferma</span><span class="lang-en" style="display:none;">RSVP</span></a></li>
-    </ul>
-    <button id="lang-toggle" class="btn btn-outline-dark ms-3" onclick="toggleLang()">🇬🇧 EN</button>
-  </div>
+<nav class="navbar fixed-top shadow-sm">
+<div class="container d-flex justify-content-between align-items-center">
+  <a class="navbar-brand fw-bold fs-4" href="#">Rebecca & Mirco</a>
+  <ul class="navbar-nav d-flex flex-row ms-auto fs-6 gap-3">
+    <li class="nav-item"><a class="nav-link" href="#info"><span class="lang-it">Info</span><span class="lang-en" style="display:none;">Information</span></a></li>
+    <li class="nav-item"><a class="nav-link" href="#conferma"><span class="lang-it">Conferma</span><span class="lang-en" style="display:none;">RSVP</span></a></li>
+    <li class="nav-item"><a class="nav-link" href="#lista"><span class="lang-it">Lista Nozze</span><span class="lang-en" style="display:none;">Wedding Registry</span></a></li>
+  </ul>
 </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
 <div class="overlay">
-  <h1>Mirco & Rebecca</h1>
+  <h1>Rebecca & Mirco</h1>
   <h2 class="mt-3"><span class="lang-it">12 Settembre 2026 • Ore 10:00</span><span class="lang-en" style="display:none;">September 12, 2026 • 10:00 AM</span></h2>
 
   <!-- COUNTDOWN QUI -->
